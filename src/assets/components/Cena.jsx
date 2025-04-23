@@ -39,7 +39,7 @@ const Cena = (props) => {
             {props.children}
             <Entity 
             cursor="rayOrigin: mouse" raycaster="objects: .clickable"></Entity>
-            <a-sky color="#ECECEC"></a-sky>
+            {/* <a-sky color="#ECECEC"></a-sky> */}
             
             {/* <Entity id="camera" movement-controls="controls: checkpoint, keyboard" checkpoint-controls="mode: animate">
                 <Entity camera="active: true" position="0 1.6 0" rotate="0 90 0" cursor="rayOrigin: mouse" wasd-controls

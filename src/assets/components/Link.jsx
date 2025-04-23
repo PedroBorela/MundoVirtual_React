@@ -32,7 +32,7 @@ const Link = (props) => {
         <>
             <Imagem posicao={imagemPos} rotacao={props.rotacao} idImagem={hovered ? props.segundaImagem : props.primeiraImagem} tamanho={props.tamanhoImagem}></Imagem>
             <Entity class="link"
-                geometry="primitive: plane; height: 0.5; width: 1"
+                geometry="primitive: plane; height: 0.25; width: 0.8"
                 material={{
                     shader: 'flat',
                     color: hovered ? '#0f0' : '#00f',
@@ -42,7 +42,7 @@ const Link = (props) => {
                 text={{
                     value: props.texto,
                     align: 'center',
-                    width: 3,
+                    width: 2,
                     color: 'black'
                 }}
                 animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter"
