@@ -34,14 +34,29 @@ Este projeto foi projetado por Pedro Borela.
 ## Comandos
 - `npm start`: inicia o projeto no ambiente de produção
 - `npm run dev`: inicia o projeto no ambiente de desenvolvimento
+- `npm run dev -- --host`: inicia o projeto no ambiente de desenvolvimento e permite acessar por dispositivos móveis
 - `npm run build`: gera o arquivo `./public/javascripts/bundle.js` que compila todos as bibliotecas JavaScript definadas em `./src/main.js`
 - `build-dev`: builda e inicia o projeto no ambiente de desenvolvimento
 
 
 ## Procedimentos ao instalar o Aframe e outros pacotes JS front-end via npm
 - `npm install NOMEDOPACOTE`
-- Inserir em `/.src/main` `require('NOMEDOPACOTE');`
+- Adicionar certificado HTTPS / Gerar o certificado autoassinado (execute no terminal):
+    openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes -subj "/CN=localhost"
+    Isso criará dois arquivos:
+        key.pem (chave privada)
+        cert.pem (certificado)
 
+    - Instalar dependência de certficado
+    npm install fs --save-dev
+
+Se preferir rodar em HTTP (sem certificado), edite o vite.config.js
+
+    export default {
+        server: {
+            // https: true,  // Comente ou remova esta linha
+        },
+    };
 
 ## Estrutura de arquivos paras mundos virtuais
 

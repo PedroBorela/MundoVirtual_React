@@ -5,8 +5,8 @@ import { useState } from "react";
 const Cena = (props) => {
 
     return (
-        <Scene cursor={{fuse:false, rayOrigin: "mouse" }} vr-mode-ui="cardboardModeEnabled:true">
-        
+        <Scene cursor={{ fuse: false, rayOrigin: "mouse" }} vr-mode-ui="cardboardModeEnabled:true">
+
 
             {/* <a id="myEnterVRButton" href="#"></a> */}
             {/* <Entity
@@ -33,14 +33,15 @@ const Cena = (props) => {
                 <img id='Leopoldina' src='../../../public/assets/imgs/Leopoldina.jpg' />
                 <img id='mapaManhu' src='../../../public/assets/imgs/mapaManhu.png' />
 
+                <a-asset-item id="porta" src='../../../public/assets/models_3d/base_basic_shaded.glb'></a-asset-item>
 
                 <img id='bemVindo' src='../../../public/assets/text/BemVindo.png' />
             </a-assets>
             {props.children}
-            <Entity 
-            cursor="rayOrigin: mouse" raycaster="objects: .clickable"></Entity>
+            <Entity
+                cursor="rayOrigin: mouse" raycaster="objects: .clickable"></Entity>
             {/* <a-sky color="#ECECEC"></a-sky> */}
-            
+
             {/* <Entity id="camera" movement-controls="controls: checkpoint, keyboard" checkpoint-controls="mode: animate">
                 <Entity camera="active: true" position="0 1.6 0" rotate="0 90 0" cursor="rayOrigin: mouse" wasd-controls
                     look-controls="pointerLockEnabled: true"></Entity>
