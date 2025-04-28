@@ -5,7 +5,7 @@ import { useState } from "react";
 const Cena = (props) => {
 
     return (
-        <Scene cursor={{ fuse: false, rayOrigin: "mouse" }} vr-mode-ui="cardboardModeEnabled:true">
+        <Scene cursor={{ fuse: false, rayOrigin: "mouse" }} vr-mode-ui="enabled:true" webxr="optionalFeatures: hit-test;">
 
 
             {/* <a id="myEnterVRButton" href="#"></a> */}
@@ -32,6 +32,7 @@ const Cena = (props) => {
 
                 <img id='Leopoldina' src='../../../public/assets/imgs/Leopoldina.jpg' />
                 <img id='mapaManhu' src='../../../public/assets/imgs/mapaManhu.png' />
+                <img id='seta' src='../../../public/assets/imgs/seta.png' />
 
                 <a-asset-item id="porta" src='../../../public/assets/models_3d/base_basic_shaded.glb'></a-asset-item>
 

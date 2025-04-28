@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom";
 import Cena from "../components/Cena";
+import Imagem from "../components/Imagem";
+import Seta from "../components/Seta";
 
 const imagens = {
     ambiente1: '../../../public/assets/imgs/img360_1.jpg',
@@ -13,6 +15,8 @@ const Ambiente360 = () => {
     return (
         <Cena>
             <a-sky src={imagem}></a-sky>
+            <Seta/>
+            
         </Cena>
     )
 }
