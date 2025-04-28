@@ -14,37 +14,27 @@ Este projeto foi projetado por Pedro Borela.
 
 ## Histórias do Usuário
 
-[Alta] Como um estudante, eu quero acessar o Museu Virtual para conhecer a história de Manhuaçu.
+**Prioridade Alta**  
+1. Como um estudante, eu quero acessar o Museu Virtual para conhecer a história de Manhuaçu.  
+2. Como um estudante, quero explorar um museu virtual de Manhuaçu, para aprender sobre a história e cultura da minha cidade de uma maneira interativa e imersiva pelo XR headset.  
+3. Como um estudante, quero participar de simulações históricas em realidade virtual, para entender melhor os eventos históricos de Manhuaçu, por meio do celular ou desktop.  
+4. Como usuário, quero tocar/clicar em ícones “(i)” espalhados pelo ambiente para abrir pop-ups com detalhes da obra, sem sair da experiência imersiva.  
+5. Como usuário, quero poder clicar em pontos do espaço para abrir fotos esféricas 360°, para ter visões fotográficas de alta resolução de determinados ambientes.  
+6. Como usuário, quero acionar vídeos em 360° em alguns pontos, para assistir a registros animados do local em imersão completa.  
 
-[Alta] Como um estudante local, quero explorar um museu virtual de Manhuaçu, para aprender sobre a história e cultura da minha cidade de uma maneira interativa e imersiva pelo XR headset.
+**Prioridade Média**  
+7. Como estudante e usuário, quero que tenha várias portas que podem me direcionar para ambientes específicos, para contribuir com o entendimento dos locais históricos.  
+8. Como usuário (mobile), quero dar “pinch” e “spread” (movimento de pinçar) na tela para dar zoom no ambiente virtual, e (desktop) usar o scroll do mouse, para examinar detalhes das obras.  
+9. Como usuário, quero que a câmera faça um “fade in/fade out” ou “zoom in” ao mudar de sala, para uma transição menos brusca e mais confortável à visão.  
+10. Como usuário, quero compartilhar um ambiente virtual, para convidar amigos.  
 
-[Alta] Como um estudante, quero participar de simulações históricas em realidade aumentada, para entender melhor os eventos históricos de Manhuaçu.
-
-[Alta] Como usuário, quero me locomover pelo ambiente virtual tocando e arrastando no celular ou clicando e arrastando no desktop, para explorar livremente o museu.
-
-[Alta] Como usuário, quero tocar/clicar em ícones “(i)” espalhados pelo ambiente para abrir pop‑ups com detalhes da obra, sem sair da experiência imersiva.
-
-[Alta] Como usuário, quero poder clicar em pontos do espaço para abrir fotos esféricas 360°, para ter visões fotográficas de alta resolução de determinados ambientes.
-
-[Alta] Como usuário, quero acionar vídeos em 360° em alguns pontos, para assistir a registros animados do local em imersão completa.
-
-[Média] Como estudante e usuário, quero que tenha várias portas que podem me direcionar para ambientes específicos, para contribuir com o entendimento dos locais históricos.
-
-[Média] Como usuário (mobile), quero dar “pinch” (e “spread”) na tela para dar zoom no ambiente virtual, e (desktop) usar o scroll do mouse, para examinar detalhes das obras.
-
-[Média] Como usuário, quero ver uma bússola ou mini‑mapa indicando minha posição e direção dentro do espaço, para não me perder durante a visita.
-
-[Média] Como visitante estrangeiro, quero alternar entre Português e Inglês (e, se possível, outros), para entender todas as descrições sem barreiras linguísticas.
-
-[Média] Como usuário, quero que a câmera faça um “fade in/fade out” ou “zoom in” ao mudar de sala, para uma transição menos brusca e mais confortável à visão.
-
-[Média] Como usuário, quero gerar um link ou compartilhar meu ponto de vista atual no ambiente virtual, para convidar amigos a ver exatamente o que estou vendo.
-
-[Média] Como usuário, quero acessar uma linha do tempo ou galeria cronológica de obras fora do AV, para entender contexto histórico rapidamente.
-
-[Baixa] Como usuário, quero ver uma galeria de fotos ou lista de obras fora do AV (num menu ou rodapé), para navegar rapidamente por todas sem percorrer todo o espaço.
-
-[Baixa] Como visitante, quero alternar entre modo claro e escuro, para adequar a visualização ao ambiente real onde estou (externo, à noite, etc.).
+**Prioridade Baixa**  
+11. Como usuário, quero ver uma bússola ou mini-mapa indicando minha posição e direção dentro do espaço, para não me perder durante a visita.  
+12. Como usuário, quero alternar entre Português e Inglês (e, se possível, outros), para entender todas as descrições sem barreiras linguísticas.  
+13. Como usuário, quero gerar um link ou compartilhar meu ponto de vista atual no ambiente virtual, para convidar amigos a ver exatamente o que estou vendo.  
+14. Como usuário, quero acessar uma linha do tempo ou galeria cronológica de obras fora do AV, para entender contexto histórico rapidamente.  
+15. Como usuário, quero ver uma galeria de fotos ou lista de obras fora do AV (num menu ou rodapé), para navegar rapidamente por todas sem percorrer todo o espaço.  
+16. Como visitante, quero alternar entre modo claro e escuro, para adequar a visualização ao ambiente real onde estou (externo, à noite, etc.).
 
 
 
