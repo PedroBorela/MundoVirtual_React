@@ -10,22 +10,6 @@ const Cena = (props) => {
     return (
         <Scene vr-mode-ui="enabled:true" webxr="optionalFeatures: hit-test;">
 
-
-            {/* <a id="myEnterVRButton" href="#"></a> */}
-            {/* <Entity
-                id="myEnterVRButton"
-                class="clickable"
-                geometry="primitive: plane; width: 0.8; height: 0.3"
-                material="color: #4CAF50; shader: flat; opacity: 0.9"
-                text="value: ENTRAR EM VR; color: white; align: center; width: 2"
-                position="1 1 -2"
-                animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter"
-                animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
-                events={{
-                    click: () => setIsVRMode(!isVRMode)
-                }}
-            /> */}
-
             <a-assets>
                 {/* Audio de click */}
                 <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
@@ -45,20 +29,15 @@ const Cena = (props) => {
                 <img id='bemVindo' src='../../../public/assets/text/BemVindo.png' />
             </a-assets>
             {props.children}
-            <Entity
-                cursor="rayOrigin: mouse" raycaster="objects: .clickable"></Entity>
-            {/* <a-sky color="#ECECEC"></a-sky> */}
-
-            {/* <Entity id="camera" movement-controls="controls: checkpoint, keyboard" checkpoint-controls="mode: animate">
-                <Entity camera="active: true" position="0 1.6 0" rotate="0 90 0" cursor="rayOrigin: mouse" wasd-controls
-                    look-controls="pointerLockEnabled: true"></Entity>
-            </Entity> */}
-            <a-camera look-controls>
+            
+            <a-camera look-controls universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate">
                 <a-cursor
                     {...propsClick}
                     fuse="true"
                     fuseTimeout="500"
                     rayOrigin="mouse"
+                    material="color: #F00
+                    shader: flat"
                 ></a-cursor>
             </a-camera>
         </Scene>
