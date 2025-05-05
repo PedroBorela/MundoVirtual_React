@@ -68,19 +68,35 @@ Se preferir rodar em HTTP (sem certificado), edite o vite.config.js
 
 ## Estrutura de arquivos paras mundos virtuais
 
-- `./bin`: 
-- `./public`: 
-    - `3dmodels`: armazenar arquivos 3D
-    - `images`: armazenar imagens
-    - `javascripts`: armazenar arquivos .js
-    - `stylesheets`: armazenar arquivos .css e outros de estilo
-- `./routes`: arquivos que configuram as rotas da aplicação
-- `./src`: contém o arquivo `main.js`, no qual define as bibliotecas .js 
-- `./views`: contém os arquivos de views
-- `.env`: define as variáveis de ambiente do projeto
-- `.gitignore`: arquivo que ignora arquivos que não devem ser rastreados pelo git
-- `app.js`: arquivo principal da aplicação
-- `package.json`: arquivo que contém os comandos e dependências do projeto
-- `README.MD`: contém intruções do projeto para o desenvolvedor
-- `webpack.config.js`: arquivo de configuração para compilação de bibliotecas .js
+-`./node_modules`: Pasta automática que armazena todas as dependências do projeto instaladas via npm/yarn. Não deve ser editada manualmente.
+-`./public`: Contém arquivos estáticos acessíveis publicamente.
+- `assets`:
+    - `imgs`: Armazena imagens utilizadas no projeto (PNG, JPG, SVG, etc).
+    -`models_3d`: Arquivos 3D (GLB, GLTF, OBJ, etc) para ambientes virtuais.
+    - `text`: Documentos de texto ou recursos linguísticos.
+-`./src`: Código-fonte principal da aplicação React.
+    -`assets`: Recursos específicos do front-end.
+        -`components`: Componentes reutilizáveis (botões, cards, headers).
+        -`sections`: Componentes de páginas/seções principais.
+-`App.jsx`: Componente raiz da aplicação.
+-`main.jsx`: Ponto de entrada que renderiza o React no DOM.
+-`index.html`: Estrutura base onde o React é renderizado.
+-`index.css`: Estilos CSS globais.
+-`eslint.config.js`:Ferramenta para identificar padrões problemáticos no código JavaScript/JSX
+-`./.gitignore`: Lista de arquivos/pastas ignorados pelo Git (ex: node_modules, .env).
+-`./package.json`: Configuração do projeto:
+Dependências
+Scripts (dev, build, test)
+Metadados (nome, versão)
+./vite.config.js: Configurações do Vite (build, plugins, server).
 
+
+## Projeto convertido para React por que ?
+
+**Por que Migrei para React + A-Frame?**  
+
+A decisão de converter o projeto de **Node.js + Jade + A-Frame** para **React + A-Frame** foi motivada pela necessidade de criar uma aplicação mais dinâmica, organizada e escalável. Enquanto Jade/Pug era eficiente para templates estáticos, React traz componentes reutilizáveis, estados dinâmicos (como `useState` e `useEffect`) e uma integração mais fluida com o A-Frame.  
+
+Além disso, a migração permite usar ferramentas modernas como **Vite** (para builds rápidos) e **ESLint** (para padronização do código), melhorando tanto a produtividade no desenvolvimento quanto a performance em produção. Com React, a manipulação de entidades 3D no A-Frame ficou mais intuitiva, usando JSX para declarar cenas e objetos VR/AR diretamente no código JavaScript.  
+
+No fim, a mudança tornou o projeto mais fácil de manter, mais interativo e preparado para futuras expansões — tudo isso mantendo a potência do A-Frame para gráficos 3D e WebXR. 🚀
