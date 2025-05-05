@@ -1,3 +1,4 @@
+import Card from "../components/Card";
 import Cena from "../components/Cena";
 import Link from "../components/Link";
 import Sala from "../components/Sala";
@@ -9,6 +10,7 @@ const AnteSala = () =>{
             <Sala tamanho={7}/>
             {/* <Texto texto='Seja bem vindo ao Museu Virtual de Manhuaçu' posicao='0 2 -2' rotacao='0 0 0'/> */}
             <Link texto='Entrar'  ref='/hallDeEntrada' posicao={'0 1 -2.3'} rotacao={'0 0 0'} primeiraImagem='#bemVindo' segundaImagem='#bemVindo' tamanhoImagem='3'/>
+            <Card texto='Seja bem vindo ao Museu Virtual de Manhuaçu' position='-2 3 -2' rotation='0 0 0'/>
             
         </Cena>
     )

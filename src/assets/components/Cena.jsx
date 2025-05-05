@@ -14,30 +14,29 @@ const Cena = (props) => {
                 {/* Audio de click */}
                 <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
 
-                <img id='primeiraImagem' src='../../../public/assets/imgs/teste.png' />
-                <img id='segundaImagem' src='../../../public/assets/imgs/teste1.png' />
+                <img id='primeiraImagem' src='/assets/imgs/teste.png' />
+                <img id='segundaImagem' src='/assets/imgs/teste1.png' />
 
-                <img id='cafeicultor' src='../../../public/assets/imgs/cafeicultor.jpg' />
-                <img id='CastelodoCafe' src='../../../public/assets/imgs/CastelodoCafe.jpg' />
+                <img id='cafeicultor' src='/assets/imgs/cafeicultor.jpg' />
+                <img id='CastelodoCafe' src='/assets/imgs/CastelodoCafe.jpg' />
 
-                <img id='Leopoldina' src='../../../public/assets/imgs/Leopoldina.jpg' />
-                <img id='mapaManhu' src='../../../public/assets/imgs/mapaManhu.png' />
-                <img id='seta' src='../../../public/assets/imgs/seta.png' />
+                <img id='Leopoldina' src='/assets/imgs/Leopoldina.jpg' />
+                <img id='mapaManhu' src='/assets/imgs/mapaManhu.png' />
+                <img id='seta' src='/assets/imgs/seta.png' />
 
-                <a-asset-item id="porta" src='../../../public/assets/models_3d/base_basic_shaded.glb'></a-asset-item>
+                <a-asset-item id="porta" src='/assets/models_3d/base_basic_shaded.glb'></a-asset-item>
 
-                <img id='bemVindo' src='../../../public/assets/text/BemVindo.png' />
+                <img id='bemVindo' src='/assets/text/BemVindo.png' />
             </a-assets>
             {props.children}
-            
-            <a-camera look-controls universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate">
+            {/* universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate" */}
+            <a-camera look-controls >
                 <a-cursor
                     {...propsClick}
                     fuse="true"
                     fuseTimeout="500"
                     rayOrigin="mouse"
-                    material="color: #F00
-                    shader: flat"
+                   material="color: #00F; shader: flat"
                 ></a-cursor>
             </a-camera>
         </Scene>
