@@ -39,6 +39,7 @@ const Link = (props) => {
                     transparent: true,
                     opacity: 0.9
                 }}
+                sound="on: click; src: #click-sound"
                 text={{
                     value: props.texto,
                     align: 'center',

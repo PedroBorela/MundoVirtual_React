@@ -3,9 +3,12 @@ import { useState } from "react";
 
 
 const Cena = (props) => {
+    const propsClick = {animation__click : "property: scale; from: 0.1 0.1 0.1; to: 1 1 1; easing: easeInCubic; dur: 300; startEvents: click",
+    animation__clickreset : "property: scale; to: 0.8 0.8 0.8; dur: 1; startEvents: animationcomplete__click",
+    animation__fusing : "property: scale; from: 1 1 1; to: 0.1 0.1 0.1; easing: easeInCubic; dur: 300; startEvents: fusing"}
 
     return (
-        <Scene cursor={{ fuse: false, rayOrigin: "mouse" }} vr-mode-ui="enabled:true" webxr="optionalFeatures: hit-test;">
+        <Scene vr-mode-ui="enabled:true" webxr="optionalFeatures: hit-test;">
 
 
             {/* <a id="myEnterVRButton" href="#"></a> */}
@@ -24,6 +27,9 @@ const Cena = (props) => {
             /> */}
 
             <a-assets>
+                {/* Audio de click */}
+                <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+
                 <img id='primeiraImagem' src='../../../public/assets/imgs/teste.png' />
                 <img id='segundaImagem' src='../../../public/assets/imgs/teste1.png' />
 
@@ -47,8 +53,13 @@ const Cena = (props) => {
                 <Entity camera="active: true" position="0 1.6 0" rotate="0 90 0" cursor="rayOrigin: mouse" wasd-controls
                     look-controls="pointerLockEnabled: true"></Entity>
             </Entity> */}
-            <a-camera>
-                <a-cursor></a-cursor>
+            <a-camera look-controls>
+                <a-cursor
+                    {...propsClick}
+                    fuse="true"
+                    fuseTimeout="500"
+                    rayOrigin="mouse"
+                ></a-cursor>
             </a-camera>
         </Scene>
     )

@@ -10,13 +10,16 @@ const imagens = {
 }
 
 const Ambiente360 = () => {
-    const {id} =useParams();
+    const { id } = useParams();
     const imagem = imagens[id];
     return (
         <Cena>
-            <a-sky src={imagem}></a-sky>
-            <Seta/>
-            
+            <a-sky src={imagem}
+                animation__fade="property: components.material.material.color; type: color; from: #FFF; to: #000; dur: 300; startEvents: fade"
+                animation__fadeback="property: components.material.material.color; type: color; from: #000; to: #FFF; dur: 300; startEvents: animationcomplete__fade"
+            ></a-sky>
+            <Seta />
+
         </Cena>
     )
 }
