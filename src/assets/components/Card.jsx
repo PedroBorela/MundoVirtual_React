@@ -1,14 +1,14 @@
 import { Entity } from "aframe-react";
 import { useState } from "react";
 
-const Card = ({ texto,posicao, ...props }) => {
+const Card = ({ texto, posicao, ...props }) => {
     const [informacao, setInformacao] = useState(false);
     const mudaComponente = () => {
         setInformacao(!informacao);
         console.log(informacao);
     }
 
-    const [x,y,z] = posicao.split(' ').map(Number);
+    const [x, y, z] = posicao.split(' ').map(Number);
 
 
     return (
@@ -17,11 +17,13 @@ const Card = ({ texto,posicao, ...props }) => {
             src="#info"
             width="0.2"
             height="0.2"
-                position={posicao}
+            position={posicao}
             {...props}
             events={{
                 click: mudaComponente,
             }}
+            animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter"
+            animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
         /> :
             <>
                 <Entity
@@ -36,8 +38,7 @@ const Card = ({ texto,posicao, ...props }) => {
                         width: 1.5,
                         align: 'center',
                         wrapCount: 30,
-                        lineHeight: 40,
-                        negate: false,
+                        lineHeight: 60,
                         scale: '0,1',
                         zOffset: 0.1, // Garante que o texto fique na frente
                         fontImage: '/assets/font/fonte.png'
@@ -51,10 +52,12 @@ const Card = ({ texto,posicao, ...props }) => {
                     src="#fechar"
                     width="0.2"
                     height="0.2"
-                    position={`${x + 0.6 } ${y + 0.6} ${z +0.05}`}
-                    
+                    position={`${x + 0.6} ${y + 0.6} ${z + 0.05}`}
+                    animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter"
+                    animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
                     events={{
                         click: mudaComponente,
+
                     }}
                     {...props}
 

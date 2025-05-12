@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import Cena from "../components/Cena";
 import Seta from "../components/Seta";
 import { useState } from "react";
+import Card from "../components/Card";
 
 
 // Ambiente 1
@@ -14,10 +15,10 @@ const imagens = {
 
 //Ambiente 2
 const imagensS1 = {
-    img1: {posicao:'0 90 0', caminho: '/assets/fotos_CasaDeCultura/imagem4.jpg'},
-    img2: {posicao:'0 90 0', caminho:'/assets/fotos_CasaDeCultura/imagem5.jpg'},
-    img3: {posicao:'0 90 0', caminho:'/assets/fotos_CasaDeCultura/imagem6.jpg'},
-    img4: {posicao:'0 90 0', caminho:'/assets/fotos_CasaDeCultura/imagem7.jpg'},
+    img1: {posicao:'0 -90 0', caminho: '/assets/fotos_CasaDeCultura/imagem4.jpg'},
+    img4: {posicao:'0 90 0', caminho:'/assets/fotos_CasaDeCultura/imagem5.jpg'},
+    img2: {posicao:'0 90 0', caminho:'/assets/fotos_CasaDeCultura/imagem6.jpg'},
+    img3: {posicao:'0 90 0', caminho:'/assets/fotos_CasaDeCultura/imagem7.jpg'},
 
 
 }
@@ -69,6 +70,7 @@ const Ambiente360 = () => {
     return (
         <Cena>
             <a-sky src={imagem} rotation={rotacao}/>
+            {/* <Card texto='Esse é o famoso Serafim Tiburcio, uma das personalidades mais importantes de Manhuaçu.' posicao='0 1.6 -2' /> */}
             <Seta onTrocarAmbiente={trocarImagem} setas='direita frente esquerda' />
         </Cena>
     );

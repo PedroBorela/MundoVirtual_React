@@ -26,6 +26,10 @@ AFRAME.registerComponent('click-handler', {
 });
 
 const Seta = ({ onTrocarAmbiente, setas }) => {
+
+    const direcoes = {esquerda: '-1.5 -0.5 -3', direita: '1.5 -0.5 -3', frente: '0 -0.5 -4' , tras: '0 -0.5 -2'};
+
+    // Animações de escala para as setas
     const scaleAnimations = {
         animation__scale: "property: scale; to: 1.3 1.3 1.3; dur: 200; startEvents: mouseenter",
         animation__reverse: "property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
@@ -52,7 +56,7 @@ const Seta = ({ onTrocarAmbiente, setas }) => {
         <Entity>
             {/* Seta Frente */}
             <Imagem
-                posicao='0 -0.5 -4'
+                posicao={direcoes.frente}
                 rotacao='90 0 -90'
                 idImagem='#seta'
                 tamanho='0.7'
@@ -62,7 +66,7 @@ const Seta = ({ onTrocarAmbiente, setas }) => {
 
             {/* Seta Direita */}
             <Imagem
-                posicao='1.5 -0.5 -3'
+                posicao={direcoes.direita}
                 rotacao='90 0 30.5'
                 idImagem='#seta'
                 tamanho='0.7'
@@ -72,7 +76,16 @@ const Seta = ({ onTrocarAmbiente, setas }) => {
             
             {/* Seta esquerda */}
             <Imagem
-                posicao='-1.5 -0.5 -3'
+                posicao={direcoes.esquerda}
+                rotacao='90 0 160'
+                idImagem='#seta'
+                tamanho='0.7'
+                {...scaleAnimations}
+                click-handler="direcao: esquerda"
+            />
+            
+            <Imagem
+                posicao={direcoes.tras}
                 rotacao='90 0 160'
                 idImagem='#seta'
                 tamanho='0.7'
