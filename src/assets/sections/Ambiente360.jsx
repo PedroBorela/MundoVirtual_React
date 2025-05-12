@@ -24,50 +24,41 @@ const conjuntos = {
     imagensS1,
     imagensS2,
 };
-
 const Ambiente360 = () => {
-    const { id } = useParams();
-    const [estado, setEstado] = useState({
-        conjunto: 'imagens',
-        ambiente: id,
-    });
+    const { id } = useParams(); // id = 'ambiente1', 'ambiente2' ou 'ambiente3'
+    const [imagemAtual, setImagemAtual] = useState('img1'); // Controla apenas img1/img2/img3
 
-    const getImagemAtual = () => {
-        const img = conjuntos[estado.conjunto][estado.ambiente];
-        return img || '/assets/imgs/s3.jpg';
+    // Mapeia cada ambiente para seu conjunto específico
+    const getConjuntoAtual = () => {
+        switch(id) {
+            case 'ambiente1': return conjuntos.imagens;
+            case 'ambiente2': return conjuntos.imagensS1;
+            case 'ambiente3': return conjuntos.imagensS2;
+            default: return conjuntos.imagens;
+        }
     };
 
-    const trocarAmbiente = (direcao) => {
-        console.log('Direção clicada:', direcao);
-
-        let novoAmbiente = estado.ambiente;
-        let novoConjunto = estado.conjunto;
-
-        if (novoAmbiente === 'ambiente1') novoConjunto = 'imagens';
-        if (novoAmbiente === 'ambiente2') novoConjunto = 'imagensS1';
-        if (novoAmbiente === 'ambiente3') novoConjunto = 'imagensS2';
-
-        if (direcao === 'frente') novoAmbiente = novoConjunto.img1;
-        else if (direcao === 'direita') novoAmbiente = novoConjunto.img2;
-        else if (direcao === 'esquerda') novoAmbiente = novoConjunto.img3;
-
-        setEstado({
-            conjunto: novoConjunto,
-            ambiente: novoAmbiente,
-        });
-
-        console.log('Novo estado:', { novoAmbiente, novoConjunto });
+    const trocarImagem = (direcao) => {
+        // Define qual imagem do conjunto atual será usada
+        let novaImagem;
+        switch(direcao) {
+            case 'frente': novaImagem = 'img1'; break;
+            case 'direita': novaImagem = 'img2'; break;
+            case 'esquerda': novaImagem = 'img3'; break;
+            default: novaImagem = 'img1';
+        }
+        setImagemAtual(novaImagem);
     };
+
+    // Obtém a imagem atual do conjunto correto
+    const imagem = getConjuntoAtual()[imagemAtual] || '/assets/imgs/s3.jpg';
 
     return (
         <Cena>
-            <a-sky src={getImagemAtual()}
-                animation__fade="property: components.material.material.color; type: color; from: #FFF; to: #000; dur: 300; startEvents: fade"
-                animation__fadeback="property: components.material.material.color; type: color; from: #000; to: #FFF; dur: 300; startEvents: animationcomplete__fade"
-            ></a-sky>
-            <Seta onTrocarAmbiente={trocarAmbiente} />
+            <a-sky src={imagem} />
+            <Seta onTrocarAmbiente={trocarImagem} />
         </Cena>
     );
-};
+};  
 
 export default Ambiente360;

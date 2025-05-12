@@ -70,21 +70,21 @@ Se preferir rodar em HTTP (sem certificado), edite o vite.config.js
 
 -`./node_modules`: Pasta automática que armazena todas as dependências do projeto instaladas via npm/yarn. Não deve ser editada manualmente.
 -`./public`: Contém arquivos estáticos acessíveis publicamente.
-- `assets`:
+- `assets`: 
     - `imgs`: Armazena imagens utilizadas no projeto (PNG, JPG, SVG, etc).
-    -`models_3d`: Arquivos 3D (GLB, GLTF, OBJ, etc) para ambientes virtuais.
+    - `models_3d`: Arquivos 3D (GLB, GLTF, OBJ, etc) para ambientes virtuais.
     - `text`: Documentos de texto ou recursos linguísticos.
--`./src`: Código-fonte principal da aplicação React.
-    -`assets`: Recursos específicos do front-end.
-        -`components`: Componentes reutilizáveis (botões, cards, headers).
-        -`sections`: Componentes de páginas/seções principais.
--`App.jsx`: Componente raiz da aplicação.
--`main.jsx`: Ponto de entrada que renderiza o React no DOM.
--`index.html`: Estrutura base onde o React é renderizado.
--`index.css`: Estilos CSS globais.
--`eslint.config.js`:Ferramenta para identificar padrões problemáticos no código JavaScript/JSX
--`./.gitignore`: Lista de arquivos/pastas ignorados pelo Git (ex: node_modules, .env).
--`./package.json`: Configuração do projeto:
+- `./src`: Código-fonte principal da aplicação React.
+    - `assets`: Recursos específicos do front-end.
+        - `components`: Componentes reutilizáveis (botões, cards, objetos).
+        - `sections`: Componentes de páginas/seções principais.
+- `App.jsx`: Componente raiz da aplicação.
+- `main.jsx`: Ponto de entrada que renderiza o React no DOM.
+- `index.html`: Estrutura base onde o React é renderizado.
+- `index.css`: Estilos CSS globais.
+- `eslint.config.js`:Ferramenta para identificar padrões problemáticos no código JavaScript/JSX
+- `./.gitignore`: Lista de arquivos/pastas ignorados pelo Git (ex: node_modules, .env).
+- `./package.json`: Configuração do projeto:
 Dependências
 Scripts (dev, build, test)
 Metadados (nome, versão)
