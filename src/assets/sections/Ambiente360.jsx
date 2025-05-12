@@ -3,20 +3,32 @@ import Cena from "../components/Cena";
 import Seta from "../components/Seta";
 import { useState } from "react";
 
+
+// Ambiente 1
 const imagens = {
-    img1: '/assets/imgs/saladeAula1.jpg',
-    img2: '/assets/imgs/saladeAula2.jpg',
-    img3: '/assets/imgs/saladeAula3.jpg',
+    img1: {posicao:'0 -100 0', caminho: '/assets/fotos_CasaDeCultura/imagem1.jpg'},
+    img2: {posicao:'0 90 0', caminho:'/assets/fotos_CasaDeCultura/imagem2.jpg'},
+    img3: {posicao:'0 90 0', caminho:'/assets/fotos_CasaDeCultura/imagem3.jpg'},
+    img4: {posicao:'0 90 0', caminho:'/assets/fotos_CasaDeCultura/imagem3_1.jpg'},
 }
+
+//Ambiente 2
 const imagensS1 = {
-    img1: '/assets/imgs/saladeaula4.jpg',
-    img2: '/assets/imgs/saladeaula5.jpg',
-    img3: '/assets/imgs/saladeaula3.jpg',
+    img1: {posicao:'0 90 0', caminho: '/assets/fotos_CasaDeCultura/imagem4.jpg'},
+    img2: {posicao:'0 90 0', caminho:'/assets/fotos_CasaDeCultura/imagem5.jpg'},
+    img3: {posicao:'0 90 0', caminho:'/assets/fotos_CasaDeCultura/imagem6.jpg'},
+    img4: {posicao:'0 90 0', caminho:'/assets/fotos_CasaDeCultura/imagem7.jpg'},
+
+
 }
+
+//Ambiente 3
 const imagensS2 = {
-    img1: '/assets/imgs/sala1.jpg',
-    img2: '/assets/imgs/sala2.avif',
-    img3: '/assets/imgs/sala3.jpg',
+    img1: {posicao:'0 90 0', caminho: '/assets/fotos_CasaDeCultura/imagem8.jpg'},
+    img2: {posicao:'0 90 0', caminho:'/assets/fotos_CasaDeCultura/imagem9.jpg'},
+    img3: {posicao:'0 90 0', caminho:'/assets/fotos_CasaDeCultura/imagem10.jpg'},
+    img4: {posicao:'0 90 0', caminho:'/assets/fotos_CasaDeCultura/imagem11.jpg'},
+
 }
 
 const conjuntos = {
@@ -42,21 +54,22 @@ const Ambiente360 = () => {
         // Define qual imagem do conjunto atual será usada
         let novaImagem;
         switch(direcao) {
-            case 'frente': novaImagem = 'img1'; break;
-            case 'direita': novaImagem = 'img2'; break;
-            case 'esquerda': novaImagem = 'img3'; break;
+            case 'frente': novaImagem = 'img2'; break;
+            case 'direita': novaImagem = 'img3'; break;
+            case 'esquerda': novaImagem = 'img4'; break;
             default: novaImagem = 'img1';
         }
         setImagemAtual(novaImagem);
     };
 
     // Obtém a imagem atual do conjunto correto
-    const imagem = getConjuntoAtual()[imagemAtual] || '/assets/imgs/s3.jpg';
+    const imagem = getConjuntoAtual()[imagemAtual]?.caminho || '/assets/imgs/s3.jpg';
+    const rotacao = getConjuntoAtual()[imagemAtual]?.posicao || '0 0 0';
 
     return (
         <Cena>
-            <a-sky src={imagem} />
-            <Seta onTrocarAmbiente={trocarImagem} />
+            <a-sky src={imagem} rotation={rotacao}/>
+            <Seta onTrocarAmbiente={trocarImagem} setas='direita frente esquerda' />
         </Cena>
     );
 };  

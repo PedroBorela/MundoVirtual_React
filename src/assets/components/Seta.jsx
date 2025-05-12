@@ -25,7 +25,7 @@ AFRAME.registerComponent('click-handler', {
     }
 });
 
-const Seta = ({ onTrocarAmbiente }) => {
+const Seta = ({ onTrocarAmbiente, setas }) => {
     const scaleAnimations = {
         animation__scale: "property: scale; to: 1.3 1.3 1.3; dur: 200; startEvents: mouseenter",
         animation__reverse: "property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
@@ -45,8 +45,12 @@ const Seta = ({ onTrocarAmbiente }) => {
         };
     }, [onTrocarAmbiente]);
 
+
+        const setasPresentes = setas.split(' ');
+        console.log(setasPresentes);
     return (
         <Entity>
+            {/* Seta Frente */}
             <Imagem
                 posicao='0 -0.5 -4'
                 rotacao='90 0 -90'
@@ -55,16 +59,20 @@ const Seta = ({ onTrocarAmbiente }) => {
                 {...scaleAnimations}
                 click-handler="direcao: frente"
             />
+
+            {/* Seta Direita */}
             <Imagem
-                posicao='3.5 -0.5 1.5'
-                rotacao='90 0 45'
+                posicao='1.5 -0.5 -3'
+                rotacao='90 0 30.5'
                 idImagem='#seta'
                 tamanho='0.7'
                 {...scaleAnimations}
                 click-handler="direcao: direita"
             />
+            
+            {/* Seta esquerda */}
             <Imagem
-                posicao='-3.5 -0.5 1.5'
+                posicao='-1.5 -0.5 -3'
                 rotacao='90 0 160'
                 idImagem='#seta'
                 tamanho='0.7'

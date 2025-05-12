@@ -24,10 +24,42 @@ const Cena = (props) => {
                 <img id='mapaManhu' src='/assets/imgs/mapaManhu.png' />
                 <img id='seta' src='/assets/imgs/seta.png' />
 
+
+
+
+
+            {/* Imagens tiradas na casa de cultura */}
+                <img id='info' src='/assets/imgs/info.png' />
+                <img id='fechar' src='/assets/imgs/fechar.png' />
+                <img id='parede' src='/assets/imgs/parede.png' />
+                <img id='teto' src='/assets/imgs/teto.png' />
+                <img id='chao' src='/assets/imgs/chao.png' />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <a-asset-item id="porta" src='/assets/models_3d/base_basic_shaded.glb'></a-asset-item>
 
                 <img id='bemVindo' src='/assets/text/BemVindo.png' />
             </a-assets>
+
+
+
+
+
             {props.children}
             {/* universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate" */}
             <a-camera look-controls >
@@ -35,7 +67,6 @@ const Cena = (props) => {
                     {...propsClick}
                     fuse="true"
                     fuseTimeout="500"
-                    rayOrigin="mouse"
                    material="color: #00F; shader: flat"
                 ></a-cursor>
             </a-camera>

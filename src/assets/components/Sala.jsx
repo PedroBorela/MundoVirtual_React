@@ -8,17 +8,17 @@ const Sala = ({tamanho}) => {
         <>
             {/* teste */}
             {/* chão */}
-            <Cubo posicao='0 0.1 0' repeat={`${tamanho} ${tamanho}`} tamanho={tamanho} rotacao='-90 0 0' cor="gray" />
+            <Cubo posicao='0 0.1 0' repeat={`${tamanho} ${tamanho}`} tamanho={tamanho} rotacao='-90 0 0' caminho='#chao' />
             {/* parede esquerda */}
-            <Cubo posicao={`${metadeTamanho} 0 0`} repeat={`${tamanho} ${tamanho}`} tamanho={tamanho} rotacao='0 -90 0' cor="yellow" />
+            <Cubo posicao={`${metadeTamanho} 0 0`} repeat={`${tamanho} ${tamanho}`} tamanho={tamanho} rotacao='0 -90 0' caminho='#parede' />
             {/* parede direita */}
-            <Cubo posicao={`-${metadeTamanho} 0 0`} repeat={`${tamanho} ${tamanho}`} tamanho={tamanho} rotacao='0 90 0' cor="blue" />
+            <Cubo posicao={`-${metadeTamanho} 0 0`} repeat={`${tamanho} ${tamanho}`} tamanho={tamanho} rotacao='0 90 0' caminho='#parede' />
             {/* parede traseira */}
-            <Cubo posicao={`0 0 ${metadeTamanho}`} repeat={`${tamanho} ${tamanho}`} tamanho={tamanho} rotacao='0 180 0' cor="pink" />
+            <Cubo posicao={`0 0 ${metadeTamanho}`} repeat={`${tamanho} ${tamanho}`} tamanho={tamanho} rotacao='0 180 0' caminho='#parede' />
             {/* parede frontal */}
-            <Cubo posicao={`0 0 -${metadeTamanho}`} repeat={`${tamanho} ${tamanho}`} tamanho={tamanho} rotacao='0 0 0' cor="orange" />
+            <Cubo posicao={`0 0 -${metadeTamanho}`} repeat={`${tamanho} ${tamanho}`} tamanho={tamanho} rotacao='0 0 0' caminho='#parede' />
             {/* teto */}
-            <Cubo posicao={`0 ${metadeTamanho} 0`} repeat={`${tamanho} ${tamanho}`} tamanho={tamanho} rotacao='90 0 0' cor="gray" />
+            <Cubo posicao={`0 ${metadeTamanho} 0`} repeat={`${tamanho} ${tamanho}`} tamanho={tamanho} rotacao='90 0 0' caminho='#teto' />
 
 
         </>
