@@ -40,12 +40,20 @@ const Link = (props) => {
                     opacity: 0.9
                 }}
                 sound="on: click; src: #click-sound"
-                text={{
-                    value: props.texto,
-                    align: 'center',
-                    width: 2,
-                    color: 'black'
-                }}
+               
+                    text={{
+
+                        font: '/assets/font/fonte-msdf.json',
+                        value: props.texto,
+                        color: '#000',
+                        width: 1.5,
+                        align: 'center',
+                        wrapCount: 28,
+                        negate: 'false',
+                        lineHeight: 60,
+                        zOffset: 0.01, // Garante que o texto fique na frente
+                        fontImage: '/assets/font/fonte.png'
+                    }}
                 animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter"
                 animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
                 events={{

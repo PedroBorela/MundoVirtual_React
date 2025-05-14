@@ -22,6 +22,7 @@ const Card = ({ texto, posicao, ...props }) => {
             events={{
                 click: mudaComponente,
             }}
+            
             animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter"
             animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
         /> :
@@ -34,13 +35,13 @@ const Card = ({ texto, posicao, ...props }) => {
 
                         font: '/assets/font/fonte-msdf.json',
                         value: texto,
-                        color: '#000',
+                        color: '#F00',
                         width: 1.5,
                         align: 'center',
-                        wrapCount: 30,
+                        wrapCount: 28,
+                        negate: 'false',
                         lineHeight: 60,
-                        scale: '0,1',
-                        zOffset: 0.1, // Garante que o texto fique na frente
+                        zOffset: 0.01, // Garante que o texto fique na frente
                         fontImage: '/assets/font/fonte.png'
                     }}
                     position={posicao}
@@ -52,7 +53,7 @@ const Card = ({ texto, posicao, ...props }) => {
                     src="#fechar"
                     width="0.2"
                     height="0.2"
-                    position={`${x + 0.6} ${y + 0.6} ${z + 0.05}`}
+                    position={`${x + 0.6} ${y + 0.6} ${z + 0.01}`}
                     animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter"
                     animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
                     events={{

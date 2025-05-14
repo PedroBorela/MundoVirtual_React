@@ -14,14 +14,14 @@ const Cena = (props) => {
                 {/* Audio de click */}
                 <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
 
-                <img id='primeiraImagem' src='/assets/imgs/teste.png' />
+                <img id='primeiraImagem' src='/assets/imgs/almeidaBoys.png' />
                 <img id='segundaImagem' src='/assets/imgs/teste1.png' />
 
                 <img id='cafeicultor' src='/assets/imgs/cafeicultor.jpg' />
                 <img id='CastelodoCafe' src='/assets/imgs/CastelodoCafe.jpg' />
 
                 <img id='Leopoldina' src='/assets/imgs/Leopoldina.jpg' />
-                <img id='mapaManhu' src='/assets/imgs/mapaManhu.png' />
+                <img id='mapaManhu' src='/assets/imgs/almeidaBoys.png' />
                 <img id='seta' src='/assets/imgs/seta.png' />
 
 
