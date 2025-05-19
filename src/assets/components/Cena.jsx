@@ -24,16 +24,11 @@ const Cena = (props) => {
                 <img id='mapaManhu' src='/assets/imgs/almeidaBoys.png' />
                 <img id='seta' src='/assets/imgs/seta.png' />
 
+            <img id="3d" src='/assets/imgs/display-3d.png' />
 
 
 
-
-            {/* Imagens tiradas na casa de cultura */}
-                <img id='info' src='/assets/imgs/info.png' />
-                <img id='fechar' src='/assets/imgs/fechar.png' />
-                <img id='parede' src='/assets/imgs/parede.png' />
-                <img id='teto' src='/assets/imgs/teto.png' />
-                <img id='chao' src='/assets/imgs/chao.png' />
+           
 
 
 

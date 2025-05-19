@@ -1,19 +1,19 @@
 export const setaConfig = {
         esquerda: {
-            direcao: '-1.5 -0.5 -3',
-            rotacao: '90 0 160'
+            direcao: '-1.5 1.5 -2',
+            rotacao: '0 0 160'
         },
         direita: {
-            direcao: '1.5 -0.5 -3',
-            rotacao: '90 0 30.5'
+            direcao: '1.5 1.5 -2',
+            rotacao: '00 0 30.5'
         },
         frente: {
-            direcao: '0 -0.5 -4',
-            rotacao: '90 0 -90'
+            direcao: '0 1 -4',
+            rotacao: '0 0 -270'
         },
         tras: {
-            direcao: '0 -0.5 -2',
-            rotacao: '90 0 -270'
+            direcao: '0 1.5 4',
+            rotacao: '0 0 -90'
         }
     };
 

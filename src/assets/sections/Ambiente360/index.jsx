@@ -1,10 +1,12 @@
 import { useParams } from "react-router-dom";
 import Cena from "../../components/Cena";
-import { useState } from "react";
-import Card from "../../components/Card";
+import { Suspense, useState } from "react";
 import Seta from "../../components/Seta";
-import { conjuntos } from "./DadosAmbiente360";
-
+import { assets, conjuntos } from "./DadosAmbiente360";
+import Utilizaveis from "../../components/Utilizaveis";
+import { Entity } from "aframe-react";
+import Objeto3D from "../../components/Objeto3D";
+import Fade from "../../components/Fade";
 
 
 
@@ -43,9 +45,18 @@ const Ambiente360 = () => {
 
     return (
         <Cena>
-            <a-sky src={imagem} rotation={rotacao} />
-            {/* <Card texto='Esse é o famoso Serafim Tiburcio, uma das personalidades mais importantes de Manhuaçu.' posicao='0 1.6 -2' /> */}
-            <Seta onTrocarAmbiente={trocarImagem} setas={setas} cards={cards} />
+            <Utilizaveis>
+                {assets}
+            </Utilizaveis>
+
+            <Suspense fallback={<Fade />}/>
+
+                <a-sky src={imagem} rotation={rotacao} />
+
+                <Seta onTrocarAmbiente={trocarImagem} setas={setas} cards={cards} />
+                {/* <a-obj-model src="#bustoSerafim"  position="0 0 -2" ></a-obj-model> */}
+                <Objeto3D posicao='-1 0 -6' scale='0.5 0.5 0.5' />
+
         </Cena>
     );
 };

@@ -53,16 +53,16 @@ const Seta = ({ onTrocarAmbiente, setas, cards }) => {
                     posicao={setaConfig[direcao].direcao}
                     rotacao={setaConfig[direcao].rotacao}
                     idImagem='#seta'
-                    tamanho='0.7'
+                    tamanho='0.4'
                     {...scaleAnimations}
                     click-handler={`direcao: ${direcao}`}
                 />
 
             ))}
-            { cards.map((card, index) => (
+            {/* { cards.map((card, index) => (
                     <Card texto={card.texto} posicao={card.posicao} key={index} />
                 ))
-            }
+            } */}
 
         </Entity>
     );

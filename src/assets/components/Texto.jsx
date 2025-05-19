@@ -12,10 +12,16 @@ const Texto = (props) =>{
                             opacity: 0.9
                         }}
                         text={{
-                            value: props.texto,
-                            align: 'center',
-                            width: 2,
-                            color: 'black'
+                           font: '/assets/font/fonte-msdf.json',
+                        value: props.texto,
+                        color: 'blue',
+                        width: 1.5,
+                        align: 'center',
+                        wrapCount: 28,
+                        negate: 'false',
+                        lineHeight: 60,
+                        zOffset: 0.01, // Garante que o texto fique na frente
+                        fontImage: '/assets/font/fonte.png'
                         }}
                         // events={{
                         //     click: handleClick,

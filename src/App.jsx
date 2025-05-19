@@ -1,9 +1,9 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'; 
 import 'aframe';
 import HallDeEntrada from './assets/sections/HallDeEntrada';
+import Ambiente360 from './assets/sections/Ambiente360';
 import PrimeiraSala from './assets/sections/PrimeiraSala';
 import AnteSala from './assets/sections/AnteSala';
-import Ambiente360 from './assets/sections/Ambiente360';
 
 const App = () => {
   return (
