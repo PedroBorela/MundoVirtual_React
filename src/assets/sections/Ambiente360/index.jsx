@@ -4,7 +4,7 @@ import { Suspense, useState } from "react";
 import Seta from "../../components/Seta";
 import { assets, conjuntos } from "./DadosAmbiente360";
 import Utilizaveis from "../../components/Utilizaveis";
-import { Entity } from "aframe-react";
+// import { Entity } from "aframe-react";
 import Objeto3D from "../../components/Objeto3D";
 import Fade from "../../components/Fade";
 
