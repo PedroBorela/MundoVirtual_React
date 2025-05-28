@@ -89,6 +89,7 @@ const GeradorCheckpoints = ({
                 position={position}
                 {...attributes} 
                 click-component-test// Espalha os atributos como checkpoint, click-component-test, htmlClass
+                muda-cor
             />
         );
     }

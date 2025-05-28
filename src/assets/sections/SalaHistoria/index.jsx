@@ -5,9 +5,11 @@ import Quadro from "../../components/Quadro"
 import GeradorCheckpoints from "../../components/GeradorCheckpoints"
 
 
+
 const SalaHistoria = () => {
     return (
         <Cena>
+            
             <Entity position="0 0 -6" scale='0.5 0.5 0.5'>
 
                 {paredes.map((parede, index) => (
@@ -23,7 +25,7 @@ const SalaHistoria = () => {
                 ))}
 
             </Entity>
-            <Quadro quantidade={16} />
+            <Quadro quantidade={8} />
             <GeradorCheckpoints quantidade={17} />
         </Cena>
     )

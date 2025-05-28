@@ -45,9 +45,10 @@ const Quadro = ({
     elementosGerados.push(
         <Entity
             key="cubo-inicial-extra"
-            primitive="a-box"
+            primitive="a-entity"
             position={`${primeiroCuboX} ${cubo.yPos} ${primeiroCuboZ}`}
             scale={cubo.scale}
+            src="#graoCafe"
             rotate-cube
             muda-cor
         />
@@ -58,8 +59,8 @@ const Quadro = ({
     for (let i = 0; i < quantidade; i++) {
         const currentX = (i % 2 === 0) ? initialX : -initialX; // Alterna o X
         const currentZ = initialZ + (i * zStep); // Calcula a posição Z
-        const rotatitionY = (i % 2 === 0) ? "30" : "-30"; 
-
+        const rotatitionY = (i % 2 === 0) ? "30" : "-30";
+        console.log(i)
         // Plano Frontal
         elementosGerados.push(
             <Entity
@@ -69,9 +70,10 @@ const Quadro = ({
                 width={plano.width}
                 height={plano.height}
                 scale={planoFront.scale}
-                rotation={`0 ${rotatitionY} 0`} 
+                rotation={`0 ${rotatitionY} 0`}
                 position={`${currentX} ${plano.yPos} ${currentZ}`}
-                material={{ color: planoFront.color }} // Para aframe-react, material é um objeto
+                // material={{ color: planoFront.color }} // Para aframe-react, material é um objeto
+                src={`#${i+1}`}
             />
         );
 
@@ -85,7 +87,7 @@ const Quadro = ({
                 height={plano.height}
                 src={"#borda3"} // Define a textura aqui
                 scale={planoBack.scale}
-                rotation={`0 ${rotatitionY} 0`} 
+                rotation={`0 ${rotatitionY} 0`}
 
                 position={`${currentX} ${plano.yPos} ${currentZ + planoBack.zOffset}`}
             // Remova ou ajuste a propriedade material abaixo:
@@ -97,9 +99,10 @@ const Quadro = ({
         elementosGerados.push(
             <Entity
                 key={`cubo-conjunto-${i}`}
-                primitive="a-box"
+                primitive="a-entity"
                 position={`${currentX} ${cubo.yPos} ${currentZ}`}
                 scale={cubo.scale}
+                gltf-model="#graoCafe" // Define a textura aqui
                 rotate-cube
                 muda-cor
             />

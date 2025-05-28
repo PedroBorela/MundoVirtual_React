@@ -38,8 +38,18 @@ const Cena = (props) => {
 
 
 
+                <a-asset-item id="graoCafe" src='/assets/models_3d/copodeCafe/textured.glb'></a-asset-item>
 
 
+                <img id="1" src='/assets/imgs/Historia-e-Economia-de-Manhuacu/1.png' />
+                <img id="2" src='/assets/imgs/Historia-e-Economia-de-Manhuacu/2.png' />
+                <img id="3" src='/assets/imgs/Historia-e-Economia-de-Manhuacu/3.png' />
+                <img id="4" src='/assets/imgs/Historia-e-Economia-de-Manhuacu/4.png' />
+                <img id="5" src='/assets/imgs/Historia-e-Economia-de-Manhuacu/5.png' />
+                <img id="6" src='/assets/imgs/Historia-e-Economia-de-Manhuacu/6.png' />
+                <img id="7" src='/assets/imgs/Historia-e-Economia-de-Manhuacu/7.png' />
+                <img id="8" src='/assets/imgs/Historia-e-Economia-de-Manhuacu/8.png' />
+                <img id="9" src='/assets/imgs/Historia-e-Economia-de-Manhuacu/9.png' />
 
 
 
