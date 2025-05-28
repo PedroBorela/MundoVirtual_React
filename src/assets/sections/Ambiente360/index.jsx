@@ -4,9 +4,8 @@ import { Suspense, useState } from "react";
 import Seta from "../../components/Seta";
 import { assets, conjuntos } from "./DadosAmbiente360";
 import Utilizaveis from "../../components/Utilizaveis";
-// import { Entity } from "aframe-react";
 import Objeto3D from "../../components/Objeto3D";
-import Fade from "../../components/Fade";
+import Fade from "../../components/Fade"
 
 
 
@@ -49,13 +48,13 @@ const Ambiente360 = () => {
                 {assets}
             </Utilizaveis>
 
-            <Suspense fallback={<Fade />}/>
+            <Suspense fallback={<Fade />}>
 
                 <a-sky src={imagem} rotation={rotacao} />
 
                 <Seta onTrocarAmbiente={trocarImagem} setas={setas} cards={cards} />
-                {/* <a-obj-model src="#bustoSerafim"  position="0 0 -2" ></a-obj-model> */}
                 <Objeto3D posicao='-1 0 -6' scale='0.5 0.5 0.5' />
+                </Suspense>
 
         </Cena>
     );

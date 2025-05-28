@@ -104,19 +104,27 @@ export const imagensS1 = {
 export const imagensS2 = {
     img1: {
         posicao: '0 90 0',
-        caminho: '/assets/fotos_CasaDeCultura/imagem8.jpg'
+        caminho: '/assets/fotos_CasaDeCultura/imagem8.jpg',
+        setas:['frente','esquerda','direita','tras'],
+
     },
     img2: {
         posicao: '0 90 0',
-        caminho: '/assets/fotos_CasaDeCultura/imagem9.jpg'
+        caminho: '/assets/fotos_CasaDeCultura/imagem9.jpg',
+        setas:['frente','esquerda','direita','tras'],
+
     },
     img3: {
         posicao: '0 90 0',
-        caminho: '/assets/fotos_CasaDeCultura/imagem10.jpg'
+        caminho: '/assets/fotos_CasaDeCultura/imagem10.jpg',
+        setas:['frente','esquerda','direita','tras'],
+
     },
     img4: {
         posicao: '0 90 0',
-        caminho: '/assets/fotos_CasaDeCultura/imagem11.jpg'
+        caminho: '/assets/fotos_CasaDeCultura/imagem11.jpg',
+        setas:['frente','esquerda','direita','tras'],
+
     },
 
 }

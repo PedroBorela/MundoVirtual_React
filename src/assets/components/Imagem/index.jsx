@@ -1,16 +1,20 @@
+import Utilizaveis from "../Utilizaveis"
 
-const Imagem = ({idImagem,posicao,rotacao,tamanho, ...rest}) => {
-    // console.log(props.posicao)
+const Imagem = ({idImagem,posicao,rotacao,tamanho,largura, ...rest}) => {
+
     return (
+        <>
+        
         <a-image
             src={idImagem}
             position={posicao}
             rotation={rotacao}
-            width={tamanho}
+            width={largura ? largura : tamanho}
             height={tamanho}
             {...rest}
             className='clickable'
         ></a-image>
+        </>
     )
 }
 

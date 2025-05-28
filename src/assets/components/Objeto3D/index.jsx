@@ -36,7 +36,7 @@ const Objeto3D = ({ posicao , ...props}) => {
                     src="#fechar"
                     width="0.5"
                     height="0.5"
-                    position={`${x + 1.5} ${y + 3.6} ${z + 3}`}
+                    position={`${x + 1.5} ${y + 2.6} ${z + 1}`}
                     {...escala}
                     events={{
                         click: mudaComponente,

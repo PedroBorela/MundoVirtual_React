@@ -5,11 +5,10 @@ AFRAME.registerComponent('click-component-test', {
     init: function () {
         const el = this.el;
         el.addEventListener('click', function () {
-            // CORREÇÃO AQUI: Declare 'initialPosition' com 'const'
             const initialPosition = el.getAttribute('position');
-            const camera = document.getElementById("camera"); // Use const ou let
+            const camera = document.getElementById("camera"); 
 
-            if (camera && initialPosition) { // Boa prática: verificar se ambos existem
+            if (camera && initialPosition) { //verificar se ambos existem
                 camera.setAttribute('position', {
                     x: initialPosition.x,
                     y: 1.6, 
@@ -34,9 +33,8 @@ const defaultConfigCheckpoints = {
     radius: 0.4,
     color: "#EF2D5E",
     rotation: "-90 0 0",
-    attributes: { // Atributos que são componentes ou classes
-        checkpoint: true, // Para <a-circle checkpoint>
-        // "click-component-test": true, // Para <a-circle click-component-test>
+    attributes: { 
+        checkpoint: true, 
         htmlClass: "clickable" // Para class="clickable"
     }
 };
@@ -88,15 +86,14 @@ const GeradorCheckpoints = ({
                 rotation={rotation}
                 position={position}
                 {...attributes} 
-                click-component-test// Espalha os atributos como checkpoint, click-component-test, htmlClass
+                click-component-test
                 muda-cor
             />
         );
     }
 
-    // Retorna uma Entity agrupadora ou diretamente o array,
-    // dependendo de como você quer organizar na cena.
-    // Uma Entity agrupadora é geralmente uma boa prática.
+    
+
     return (
         <Entity>
             {checkpointsGerados}

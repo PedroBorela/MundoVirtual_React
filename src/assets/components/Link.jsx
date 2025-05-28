@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Imagem from './Imagem';
 import { useNavigate } from 'react-router-dom';
 
-// import { Entity } from 'aframe-react';
 
 
 const Link = (props) => {
@@ -16,9 +15,7 @@ const Link = (props) => {
             props.evento()
         navigate(props.ref)
     }
-    // let posi = props.posicao
-    // console.log(posi)
-    // console.log(typeof(posi))
+
 
     // Transforma string númerica em array
     const posArray = props.posicao.split(' ').map(Number);
@@ -30,9 +27,9 @@ const Link = (props) => {
 
     return (
         <>
-            <Imagem posicao={imagemPos} rotacao={props.rotacao} idImagem={hovered ? props.segundaImagem : props.primeiraImagem} tamanho={props.tamanhoImagem}></Imagem>
+            <Imagem posicao={imagemPos} rotacao={props.rotacao} idImagem={hovered ? props.segundaImagem : props.primeiraImagem} tamanho={props.tamanhoImagem} largura={props.largura}></Imagem>
             <Entity class="link"
-                geometry="primitive: plane; height: 0.25; width: 0.9"
+                geometry="primitive: plane; height: 0.35; width: 1.5"
                 material={{
                     shader: 'flat',
                     color: hovered ? '#0f0' : '#00f',
@@ -40,20 +37,20 @@ const Link = (props) => {
                     opacity: 0.9
                 }}
                 sound="on: click; src: #click-sound"
-               
-                    text={{
 
-                        font: '/assets/font/fonte-msdf.json',
-                        value: props.texto,
-                        color: '#000',
-                        width: 1.5,
-                        align: 'center',
-                        wrapCount: 28,
-                        negate: 'false',
-                        lineHeight: 60,
-                        zOffset: 0.01, // Garante que o texto fique na frente
-                        fontImage: '/assets/font/fonte.png'
-                    }}
+                text={{
+
+                    font: '/assets/font/fonte-msdf.json',
+                    value: props.texto,
+                    color: '#000',
+                    width: 1.5,
+                    align: 'center',
+                    wrapCount: 28,
+                    negate: 'false',
+                    lineHeight: 60,
+                    zOffset: 0.1, // Garante que o texto fique na frente
+                    fontImage: '/assets/font/fonte.png'
+                }}
                 animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter"
                 animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
                 events={{
@@ -64,8 +61,6 @@ const Link = (props) => {
                 }}
                 position={props.posicao}
                 rotation={props.rotacao}
-                // scale={hovered ? '1.2' : '1'}
-
             >
 
             </Entity>

@@ -13,7 +13,6 @@ const Card = ({ texto, posicao, ...props }) => {
 
     const [x, y, z] = posicao.split(' ').map(Number);
 
-    // animation__scale="property: scale; from: 1 1 1; to: 1.2 1.2 1.2; dur: 500; dir: alternate; loop: true"
 
     return (
         !informacao ? <Entity

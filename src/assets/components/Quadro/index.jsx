@@ -26,7 +26,7 @@ const mergeDeep = (target, source) => {
 };
 
 const Quadro = ({
-    quantidade = 7, // Número de conjuntos principais 
+    quantidade = 7, // Qtd de conjuntos principais 
     config: customConfig = {}, // Prop 'config' para todas as personalizações
 }) => {
     // Mescla as configurações padrão com as customizadas fornecidas via props
@@ -38,7 +38,7 @@ const Quadro = ({
     const elementosGerados = [];
 
 
-    // Este cubo corresponde ao primeiro elemento do seu array `cubos` original.
+    // Este cubo corresponde ao primeiro elemento do do array 
     const primeiroCuboX = -initialX;
     const primeiroCuboZ = initialZ - zStep;
 
@@ -54,8 +54,8 @@ const Quadro = ({
         />
     );
 
-    // 2. Gerar os Conjuntos Principais de Quadros
-    // Cada conjunto tem um plano frontal, um plano traseiro e um cubo associado.
+ 
+    
     for (let i = 0; i < quantidade; i++) {
         const currentX = (i % 2 === 0) ? initialX : -initialX; // Alterna o X
         const currentZ = initialZ + (i * zStep); // Calcula a posição Z
@@ -72,7 +72,6 @@ const Quadro = ({
                 scale={planoFront.scale}
                 rotation={`0 ${rotatitionY} 0`}
                 position={`${currentX} ${plano.yPos} ${currentZ}`}
-                // material={{ color: planoFront.color }} // Para aframe-react, material é um objeto
                 src={`#${i+1}`}
             />
         );
@@ -85,13 +84,11 @@ const Quadro = ({
                 htmlClass={plano.className}
                 width={plano.width}
                 height={plano.height}
-                src={"#borda3"} // Define a textura aqui
+                src={"#borda3"}  //borda do quadro
                 scale={planoBack.scale}
                 rotation={`0 ${rotatitionY} 0`}
 
                 position={`${currentX} ${plano.yPos} ${currentZ + planoBack.zOffset}`}
-            // Remova ou ajuste a propriedade material abaixo:
-            // material={{ color: planoBack.color }} // <--- Remova esta linha
             />
         );
 
@@ -111,7 +108,6 @@ const Quadro = ({
 
     // Retorna uma única entidade A-Frame que agrupa todos os elementos gerados.
     // Isso pode ser útil para aplicar transformações (posição, rotação, escala)
-    // a todo o conjunto de quadros de uma vez, se necessário.
     return (
         <Entity>
             {elementosGerados}

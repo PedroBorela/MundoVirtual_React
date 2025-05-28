@@ -10,7 +10,6 @@ const CaixaInterativa = (props) => {
             position = {props.posicao}
             material="color: yellow"
             event-set__click={props.mudaTamanho}
-            // event-set__click="material.color: red; scale: 2 2 2"
             event-set__mouseenter="material.color: blue"
             event-set__mouseleave="material.color: yellow"
             animation__scale="property: scale; dir: alternate; dur: 200; startEvents: click"

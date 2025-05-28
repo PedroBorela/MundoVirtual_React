@@ -6,7 +6,6 @@ const Sala = ({tamanho}) => {
 
     return (
         <>
-            {/* teste */}
             {/* chão */}
             <Parede posicao='0 0.1 0' repeat={`${tamanho} ${tamanho}`} tamanho={tamanho} rotacao='-90 0 0' caminho='#chao' />
             {/* parede esquerda */}

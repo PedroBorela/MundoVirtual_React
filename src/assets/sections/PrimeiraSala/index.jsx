@@ -7,6 +7,7 @@ const PrimeiraSala = () => {
         <Cena>
             <Sala  tamanho={7}/>
             <Link ref='/' texto='mundo' posicao={'0 1.1 -2.3'} rotacao={'0 0 0'}/>
+            {/* <video id='video' src="" */}
         </Cena>
     )
 }

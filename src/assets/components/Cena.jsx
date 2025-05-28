@@ -33,6 +33,10 @@ const Cena = (props) => {
                 <img id="borda1" src='/assets/imgs/borda.jpg' />
                 <img id="borda2" src='/assets/imgs/borda2.jpg' />
                 <img id="borda3" src='/assets/imgs/borda3.jpg' />
+
+
+
+                <img id="trem" src='/assets/imgs/Placa.png' />
                 
 
 
@@ -55,15 +59,9 @@ const Cena = (props) => {
 
                 <a-asset-item id="porta" src='/assets/models_3d/base_basic_shaded.glb'></a-asset-item>
 
-                <img id='bemVindo' src='/assets/text/BemVindo.png' />
+                <img id='bemVindo' src='/assets/imgs/bemVindo.png' />
             </a-assets>
-
-
-
-
-
             {props.children}
-            {/* universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate" */}
             <a-camera id="camera" look-controls >
                 <a-cursor
                     {...propsClick}
