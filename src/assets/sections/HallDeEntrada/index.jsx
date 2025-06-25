@@ -19,7 +19,7 @@ const HallDeEntrada = () => {
 
             <Link texto='O Café e Nossa História' ref='/ambiente/ambiente1' posicao={'0 1 2.3'} rotacao={'0 180 0'} tamanhoImagem='1.5' primeiraImagem='#cafeicultor' segundaImagem='#CastelodoCafe' />
 
-            <Link texto='Quem Fez Manhuaçu' ref='/ambiente/ambiente2' posicao={'2.3 1 0'} rotacao={'0 -90 0'} tamanhoImagem='1.5' primeiraImagem='#mapaManhu' segundaImagem='#Leopoldina' />
+            <Link texto='Quem Fez Manhuaçu' ref='/ambiente/ambiente2' posicao={'2.3 1 0'} rotacao={'0 -90 0'} tamanhoImagem='1.5' primeiraImagem='#historiamg' segundaImagem='#historiamg2' />
 
             <Link texto='Belezas Naturais' ref='/ambiente/ambiente3' posicao={'-2.3 1 0'} rotacao={'0 90 0'} tamanhoImagem='1.5' primeiraImagem='#mapaManhu' segundaImagem='#Leopoldina' />
 

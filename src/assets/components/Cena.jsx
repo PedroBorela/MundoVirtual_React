@@ -19,11 +19,15 @@ const Cena = (props) => {
                 <img id='primeiraImagem' src='/assets/imgs/almeidaBoys.png' />
                 <img id='segundaImagem' src='/assets/imgs/teste1.png' />
 
-                <img id='cafeicultor' src='/assets/imgs/cafeicultor.jpg' />
-                <img id='CastelodoCafe' src='/assets/imgs/CastelodoCafe.jpg' />
+                <img id='cafeicultor' src='/assets/imgs/coffeHistory.png' />
+                <img id='CastelodoCafe' src='/assets/imgs/coffeHistory2.png' />
 
-                <img id='Leopoldina' src='/assets/imgs/Leopoldina.jpg' />
-                <img id='mapaManhu' src='/assets/imgs/almeidaBoys.png' />
+                <img id='Leopoldina' src='/assets/imgs/mg.png' />
+                <img id='mapaManhu' src='/assets/imgs/mg2.png' />
+
+                <img id='historiamg' src='/assets/imgs/hs.png' />
+                <img id='historiamg2' src='/assets/imgs/hs2.png' />
+
                 <img id='seta' src='/assets/imgs/seta.png' />
 
                 <img id="3d" src='/assets/imgs/display-3d.png' />
@@ -37,7 +41,7 @@ const Cena = (props) => {
 
 
                 <img id="trem" src='/assets/imgs/Placa.png' />
-                
+
 
 
 

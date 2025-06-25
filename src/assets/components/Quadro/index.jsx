@@ -107,7 +107,7 @@ const Quadro = ({
     }
 
     // Retorna uma única entidade A-Frame que agrupa todos os elementos gerados.
-    // Isso pode ser útil para aplicar transformações (posição, rotação, escala)
+    // Isso é útil para aplicar transformações (posição, rotação, escala)
     return (
         <Entity>
             {elementosGerados}
