@@ -9,8 +9,9 @@ const Cena = (props) => {
         animation__fusing: "property: scale; from: 1 1 1; to: 0.1 0.1 0.1; easing: easeInCubic; dur: 300; startEvents: fusing"
     }
 
+    
     return (
-        <Scene vr-mode-ui="enabled:true" webxr="optionalFeatures: hit-test;">
+                <a-scene vr-mode-ui="enabled: true; cardboardModeEnabled: true">
 
             <a-assets>
                 {/* Audio de click */}
@@ -21,6 +22,8 @@ const Cena = (props) => {
 
                 <img id='cafeicultor' src='/assets/imgs/coffeHistory.png' />
                 <img id='CastelodoCafe' src='/assets/imgs/coffeHistory2.png' />
+                <img id='entradaProxSala' src="/assets/imgs/entradaProximaSala.jpg" />
+                <img id='entrandoPrt' src="/assets/imgs/entrandoPrt.jpg" />
 
                 <img id='Leopoldina' src='/assets/imgs/mg.png' />
                 <img id='mapaManhu' src='/assets/imgs/mg2.png' />
@@ -74,7 +77,7 @@ const Cena = (props) => {
                     material="color: #00F; shader: flat"
                 ></a-cursor>
             </a-camera>
-        </Scene>
+        </a-scene>
     )
 }
 

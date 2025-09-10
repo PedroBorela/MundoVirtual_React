@@ -25,6 +25,8 @@ const HallDeEntrada = () => {
 
             <Entity gltf-model="#porta" class="clickable" rotation="0 180 0" scale="1.5 1.5 1.5" position="-2 0 -2"></Entity>
             <Entity gltf-model="#porta" class="clickable" rotation="0 180 0" scale="1.5 1.5 1.5" position="2 0 -2"></Entity>
+            <Entity gltf-model="#porta" class="clickable" rotation="0 180 0" scale="1.5 1.5 1.5" position="-2 0 2"></Entity>
+            <Entity gltf-model="#porta" class="clickable" rotation="0 180 0" scale="1.5 1.5 1.5" position="2 0 2"></Entity>
         </Cena>
     )
 }

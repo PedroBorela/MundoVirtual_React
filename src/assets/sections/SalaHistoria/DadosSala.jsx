@@ -1,19 +1,19 @@
 export const paredes = [
     {
         position: "0 0.1 0",
-        repeat: "10 10",
+        repeat: "4 4",
         rotation: "-90 0 0",
         width: 45,
         height: 150,
-        color: "#32273B"
+        src:"#chao"
     },
     {
         position: "0 10 -60",
-        repeat: "10 10",
+        repeat: "4 4",
         rotation: "90 0 0",
         width: 45,
         height: 150,
-        color: "#32273B"
+        src:"#teto"
     },
 
     {
@@ -21,35 +21,36 @@ export const paredes = [
         rotation: "0 -180 0",
         width: 45,
         height: 10,
-        color: "#4F3366"
+        src:"#parede",
+        repeat:"2 0"
     },
     {
         position: "0 5 -75",
         rotation: "0 0 0",
         width: 45,
         height: 10,
-        color: "#4F3366"
+        src:"#parede"
     },
     {
         position: "-22.5 5 -40",
         rotation: "0 90 0",
         width: 120,
         height: 10,
-        color: "#4F3366"
+        src:"#parede"
     },
     {
         position: "22.5 5 -40",
         rotation: "0 -90 0",
         width: 120,
         height: 10,
-        color: "#4F3366"
+        src:"#parede"
     },
     {
         position: "22.5 5 -10",
         rotation: "0 -90 0",
         width: 20,
         height: 10,
-        color: "#4F3366"
+        src:"#parede"
     }
 ];
 

@@ -20,7 +20,8 @@ const SalaHistoria = () => {
                         rotation={parede.rotation}
                         width={parede.width}
                         height={parede.height}
-                        color={parede.color}
+                        src={parede.src}
+                        repeat={parede.repeat}
                     />
                 ))}
 

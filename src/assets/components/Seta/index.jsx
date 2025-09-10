@@ -3,6 +3,7 @@ import { Entity } from "aframe-react";
 import Imagem from "../Imagem";
 import Card from "../Card";
 import { setaConfig ,scaleAnimations } from "./DadosSeta";
+import Objeto3D from "../Objeto3D";
 
 
 AFRAME.registerComponent('click-handler', {
@@ -27,7 +28,7 @@ AFRAME.registerComponent('click-handler', {
     }
 });
 
-const Seta = ({ onTrocarAmbiente, setas, cards }) => {
+const Seta = ({ onTrocarAmbiente, setas, cards, obj3d }) => {
 
     // Escuta o evento global e repassa pro React
     useEffect(() => {
@@ -59,10 +60,13 @@ const Seta = ({ onTrocarAmbiente, setas, cards }) => {
                 />
 
             ))}
-            {/* { cards.map((card, index) => (
-                    <Card texto={card.texto} posicao={card.posicao} key={index} />
+             { cards.map((card, index) => (
+                    <Card texto={card.texto} posicao={card.posicao} key={index} rotacao={card.rotacao}  />
                 ))
-            } */}
+            } 
+            {obj3d.map((objeto, index) => (
+                <Objeto3D posicao={objeto.posicao} scale={objeto.scale} key={index}   />
+            ))}
 
         </Entity>
     );

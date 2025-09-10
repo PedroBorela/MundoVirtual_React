@@ -1,17 +1,23 @@
 import { useParams } from "react-router-dom";
 import Cena from "../../components/Cena";
-import { Suspense, useState } from "react";
+import { Suspense, useState, useEffect } from "react";
 import Seta from "../../components/Seta";
 import { assets, conjuntos } from "./DadosAmbiente360";
 import Utilizaveis from "../../components/Utilizaveis";
 import Objeto3D from "../../components/Objeto3D";
 import Fade from "../../components/Fade"
+import Link from "../../components/Link";
 
 
 
 const Ambiente360 = () => {
     const { id } = useParams(); // id = 'ambiente1', 'ambiente2' ou 'ambiente3'
     const [imagemAtual, setImagemAtual] = useState('img1'); // Controla apenas img1/img2/img3
+
+    // Reset imagemAtual para 'img1' quando mudar de ambiente
+    useEffect(() => {
+        setImagemAtual('img1');
+    }, [id]);
 
     // Mapeia cada ambiente para seu conjunto específico
     const getConjuntoAtual = () => {
@@ -41,6 +47,8 @@ const Ambiente360 = () => {
     const rotacao = getConjuntoAtual()[imagemAtual]?.posicao || '0 0 0';
     const setas = getConjuntoAtual()[imagemAtual]?.setas || [];
     const cards = getConjuntoAtual()[imagemAtual]?.cards || [];
+    const links = getConjuntoAtual()[imagemAtual]?.links || [];
+    const Objeto3D = getConjuntoAtual()[imagemAtual]?.objeto3d || [];
 
     return (
         <Cena>
@@ -52,8 +60,21 @@ const Ambiente360 = () => {
 
                 <a-sky src={imagem} rotation={rotacao} />
 
-                <Seta onTrocarAmbiente={trocarImagem} setas={setas} cards={cards} />
-                <Objeto3D posicao='-1 0 -6' scale='0.5 0.5 0.5' />
+                <Seta onTrocarAmbiente={trocarImagem} setas={setas} cards={cards} obj3d={Objeto3D} />
+                
+                {links.map((link, index) => (
+                    <Link
+                        key={index}
+                        texto={link.texto}
+                        ref={link.ref}
+                        posicao={link.posicao}
+                        rotacao={link.rotacao}
+                        tamanhoImagem={link.tamanhoImagem}
+                        primeiraImagem={link.primeiraImagem}
+                        segundaImagem={link.segundaImagem}
+                    />
+                ))}
+                {/* <Objeto3D posicao='-1 0 -6' scale='0.5 0.5 0.5' /> */}
                 </Suspense>
 
         </Cena>

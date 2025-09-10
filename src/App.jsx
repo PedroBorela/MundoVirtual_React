@@ -12,6 +12,7 @@ const App = () => {
       <Router>
         <Routes>
           <Route path='/' element={<AnteSala/>}/>
+          <Route path='*' element={<AnteSala/>}/>
           <Route path='/hallDeEntrada' element={<HallDeEntrada/>}/>
           <Route path='/sala' element={<SalaHistoria/>}/>
           <Route path='/ambiente/:id' element={<Ambiente360/>}/>
